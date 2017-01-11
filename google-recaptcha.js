@@ -13,3 +13,7 @@ window.grecaptcha = {
     return 'FAKE-RECAPTCHA-WIDGET-ID'
   }
 }
+
+if ('recaptchaOnloadCallback' in window) {
+  window.recaptchaOnloadCallback()
+}
