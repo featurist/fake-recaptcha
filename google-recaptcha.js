@@ -12,7 +12,7 @@ window.grecaptcha = {
     var fakeRecaptchaElement = document.createElement('div')
     fakeRecaptchaElement.innerHTML = '[FAKE-RECAPTCHA]'
     element.appendChild(fakeRecaptchaElement)
-    if (optins.callback) {
+    if (options.callback) {
       options.callback('FAKE-RECAPTCHA-RESPONSE')
     }
     return 'FAKE-RECAPTCHA-WIDGET-ID'
