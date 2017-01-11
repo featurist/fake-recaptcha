@@ -1,5 +1,6 @@
 window.grecaptcha = {
   getResponse: function() {
+    console.log("FAKE-RECAPTCHA-GETRESPONSE")
     return 'FAKE-RECAPTCHA-RESPONSE'
   },
 
