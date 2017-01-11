@@ -8,8 +8,13 @@ window.grecaptcha = {
     console.log("FAKE-RECAPTCHA-RESET", arguments)
   },
 
-  render: function() {
-    console.log("FAKE-RECAPTCHA-RENDER", arguments)
+  render: function(element, options) {
+    var fakeRecaptchaElement = document.createElement('div')
+    fakeRecaptchaElement.innerHTML = '[FAKE-RECAPTCHA]'
+    element.appendChild(fakeRecaptchaElement)
+    if (optins.callback) {
+      options.callback('FAKE-RECAPTCHA-RESPONSE')
+    }
     return 'FAKE-RECAPTCHA-WIDGET-ID'
   }
 }
