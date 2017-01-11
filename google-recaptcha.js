@@ -13,7 +13,9 @@ window.grecaptcha = {
     fakeRecaptchaElement.innerHTML = '[FAKE-RECAPTCHA]'
     element.appendChild(fakeRecaptchaElement)
     if (options.callback) {
-      options.callback('FAKE-RECAPTCHA-RESPONSE')
+      setTimeout(function() {
+        options.callback('FAKE-RECAPTCHA-RESPONSE')
+      }, 10)
     }
     return 'FAKE-RECAPTCHA-WIDGET-ID'
   }
